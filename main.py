@@ -9,3 +9,4 @@ out_path = './editedImg'
 
 for filename in os.listdir(in_paths):
     img = Image.open(f"{in_paths}/{filename}")
+    edit = img.filter(ImageFilter.SHARPEN).convert("L")
